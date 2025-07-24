@@ -1,0 +1,39 @@
+.container-image-home{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: url('../../../assets/images/space.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+.container-presentation{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  background-color: black;
+  color: white;
+  
+  .container-text{
+    width: 50%;
+    padding: 20px;
+
+    h1{
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    p{
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .container-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
