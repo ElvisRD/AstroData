@@ -1,18 +1,39 @@
 <section class="container-image-home">
-  <div>
+  <div class="container-text">
+    <h1>Explora el Universo con la NASA</h1>
+    <h3>Descubre cada día una nueva maravilla del cosmos</h3>
+    <button>Explorar ahora</button>
   </div>
     
 </section>
 <section class="container-presentation">
-    <div class="container-text">
-        <h1>Welcome to AstroData</h1>
-        <p>Your gateway to the universe of astronomical data.</p>
-        <p>Explore, analyze, and visualize celestial phenomena with ease.</p>
-        <p>Join us in our journey through the cosmos!</p>
-    </div>
-    <div class="container-image">
-      <img src="assets/images/space.jpeg" alt="space">
-  
-    </div>
+  <div class="container-text">
+    <h1>Bienvenido a <span class="brand">AstroData</span></h1>
+    <p>Tu puerta de entrada al universo de los datos astronómicos.</p>
+    <p>Consulta imágenes del espacio en alta resolución, aprende sobre misiones espaciales y accede a datos reales de la NASA.</p>
+    <p>Explora el cosmos como nunca antes — ¡todo desde un solo lugar!</p>
+    <ul class="highlights">
+      <li>🌌 Imagen astronómica del día (APOD)</li>
+      <li>🚀 Misiones actuales y pasadas</li>
+      <li>📊 Visualizaciones interactivas</li>
+      <li>🔭 Datos en tiempo real de cuerpos celestes</li>
+    </ul>
+    <a href="#explorar" class="btn-explorar">Empezar a explorar</a>
+  </div>
+  <div class="container-image">
+    <img src="assets/images/luna.jpg" alt="Imagen de la luna desde el espacio">
+  </div>
+</section>
+<section id="APOD" class="container-apod">
+  <div class="container-image">
+    @if(pictureDayData?.media_type === 'image') {
+      <img [src]="pictureDayData?.url" alt="Imagen del día de la NASA">
+    }
+  </div>
+  <div class="container-text">
+    <h3>{{pictureDayData?.title}}</h3>
+    <p>{{pictureDayData?.explanation}}</p>
+    <p>{{pictureDayData?.copyright}}</p>
+  </div>
 
 </section>
