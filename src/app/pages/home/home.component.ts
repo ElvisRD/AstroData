@@ -19,6 +19,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.getAstronomyPicture();
+    this.getCategories();
   }
 
 
@@ -31,6 +32,12 @@ export class HomeComponent {
       error: (error) => {
         console.error('Error fetching astronomy picture:', error);
       }
+    });
+  }
+
+  getCategories() {
+    this.nasaService.getCategoriesNasa().subscribe(data => {
+     console.log(data);
     });
   }
 

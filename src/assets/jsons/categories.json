@@ -1,0 +1,34 @@
+[
+    {
+      "imagen": "assets/icons/planet.svg",
+      "alt": "Planetas",
+      "titulo": "Planetas del Sistema Solar",
+      "descripcion": "Descubre información detallada sobre cada planeta.",
+      "enlace": "/planetas",
+      "textoBoton": "Ver más"
+    },
+    {
+      "imagen": "assets/icons/rocket.svg",
+      "alt": "Misiones",
+      "titulo": "Misiones Espaciales",
+      "descripcion": "Conoce las misiones más importantes de la historia y las actuales.",
+      "enlace": "/misiones",
+      "textoBoton": "Explorar"
+    },
+    {
+      "imagen": "assets/icons/satellite.svg",
+      "alt": "Satélites",
+      "titulo": "Satélites y Observatorios",
+      "descripcion": "Visualiza datos y ubicación de satélites en tiempo real.",
+      "enlace": "/satelites",
+      "textoBoton": "Ver ahora"
+    },
+    {
+      "imagen": "assets/icons/telescope.svg",
+      "alt": "Datos en vivo",
+      "titulo": "Datos en Vivo",
+      "descripcion": "Observa cuerpos celestes en tiempo real con datos de NASA Eyes.",
+      "enlace": "/datos-vivo",
+      "textoBoton": "Descubrir"
+    }
+]
