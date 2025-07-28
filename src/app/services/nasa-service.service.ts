@@ -17,7 +17,11 @@ export class NasaServiceService {
   }
 
   getCategoriesNasa(): Observable<any> {
-  return this.http.get<any>('assets/jsons/categories.json');
+    return this.http.get<any>('assets/jsons/categories.json');
+  }
+
+  getInterestingPhrases(): Observable<any> {
+    return this.http.get<any>('assets/jsons/interesting-text.json');
   }
 
   getAsteroidsNeoFeed(): Observable<any> {

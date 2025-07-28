@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { NasaServiceService } from '../../services/nasa-service.service';
-
+import { CardElementComponent } from '../../components/card-element/card-element.component';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CardElementComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 
   pictureDayData: any;
+  allInterestingPhrases: any;
+  
+  categories: any[] = [];
 
   constructor(
     private nasaService: NasaServiceService,
@@ -20,8 +23,19 @@ export class HomeComponent {
   ngOnInit(): void {
     this.getAstronomyPicture();
     this.getCategories();
+    this.getInterestingText();
   }
 
+  getInterestingText() {
+    this.nasaService.getInterestingPhrases().subscribe({
+      next: (data: any) => {
+        this.allInterestingPhrases = data.phrases;
+      },
+      error: (error) => {
+        console.error('Error fetching interesting text:', error);
+      }
+    });
+  }
 
   getAstronomyPicture() {
     this.nasaService.getAstronomyPictureOfTheDay().subscribe({
@@ -37,10 +51,9 @@ export class HomeComponent {
 
   getCategories() {
     this.nasaService.getCategoriesNasa().subscribe(data => {
-     console.log(data);
+     this.categories = data;
     });
   }
 
-  
 
 }
