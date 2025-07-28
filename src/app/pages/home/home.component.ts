@@ -11,9 +11,8 @@ import { CardElementComponent } from '../../components/card-element/card-element
 export class HomeComponent {
 
   pictureDayData: any;
-  allInterestingPhrases: any;
-  
   categories: any[] = [];
+  interestingPhrases: any[] = [];
 
   constructor(
     private nasaService: NasaServiceService,
@@ -29,12 +28,26 @@ export class HomeComponent {
   getInterestingText() {
     this.nasaService.getInterestingPhrases().subscribe({
       next: (data: any) => {
-        this.allInterestingPhrases = data.phrases;
+        this.setSentences(data.phrases);
       },
       error: (error) => {
         console.error('Error fetching interesting text:', error);
       }
     });
+  }
+
+  setSentences(phrases: string[]) {
+
+    while (this.interestingPhrases.length < 3) {
+      const RandomNum = Math.floor(Math.random() * 50);
+      
+      const phrase = phrases[RandomNum];
+      if (!this.interestingPhrases.includes(phrase)) {
+        this.interestingPhrases.push(phrase);
+      }
+
+    }
+
   }
 
   getAstronomyPicture() {

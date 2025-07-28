@@ -53,7 +53,6 @@
 }
 
 .container-presentation{
-  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -67,11 +66,30 @@
     align-items: center;
     
     img{
-      width: auto;
-      height: 80%;
+      width: 550px;
     }
   }
 
+}
+
+.container-interesting-phrases {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+
+  .container-text {
+    text-align: center;
+    font-size: 2rem;
+    padding: 0 20px;
+    
+    .quotes {
+      font-size: 2.5rem;
+      padding: 0 6px;
+      color: #ffffff; /* Color for quotes */
+    }
+  }
 }
 
 .container-apod{
