@@ -63,8 +63,14 @@ export class HomeComponent {
   }
 
   getCategories() {
-    this.nasaService.getCategoriesNasa().subscribe(data => {
-     this.categories = data;
+    this.nasaService.getCategoriesNasa().subscribe({
+      next: (data: any) => {
+        this.categories = data;
+        console.log(data);
+      },
+      error: (error) => {
+        console.error('Error fetching categories:', error);
+      }
     });
   }
 

@@ -2,8 +2,8 @@
   <div class="image-luna" aria-hidden="true"></div>
 
   <div class="container-text">
-    <h1>Explora el Universo</h1>
-    <h3>Descubre cada día una nueva maravilla del cosmos</h3>
+    <h1>ASTRODATA</h1>
+    <h3>Explora el universo con datos obtenidos de la NASA</h3>
     <button type="button">Explorar ahora</button>
   </div>
 </section>
@@ -35,28 +35,55 @@
 <section id="APOD" class="container-apod">
   <div class="apod-content">
     <div class="container-image">
-    @if(pictureDayData?.media_type === 'image') {
-      <img [src]="pictureDayData?.url" alt="Imagen del día de la NASA">
-    }
+      @if(pictureDayData?.media_type === 'image') {
+        <img [src]="pictureDayData?.url" alt="Imagen del día de la NASA"> 
+      }
+    </div>
+    <div class="container-text">
+      <h3>Imagen del dia</h3>
+      <h3>{{pictureDayData?.title}}</h3>
+      <p>{{pictureDayData?.explanation}}</p>
+      <p>{{pictureDayData?.copyright}}</p>
+    </div>
   </div>
+</section>
+<section class="container-interesting-phrases">
   <div class="container-text">
-    <h3>Imagen del dia</h3>
-    <h3>{{pictureDayData?.title}}</h3>
-    <p>{{pictureDayData?.explanation}}</p>
-    <p>{{pictureDayData?.copyright}}</p>
-  </div>
+    <span class="quotes">"</span>
+    <span class="text">{{interestingPhrases[1]}}</span>
+    <span class="quotes">"</span>
   </div>
 </section>
 <section class="container-cards">
   <h3>Explora más</h3>
   <div class="cards">
-    <app-card-element></app-card-element>
+    @for (category of categories; track $index) {
+       <app-card-element
+         [dataCard]="category"
+       ></app-card-element>
+    }
   </div>
 </section>
-<section></section>
+<section class="container-interesting-phrases">
+  <div class="container-text">
+    <span class="quotes">"</span>
+    <span class="text">{{interestingPhrases[2]}}</span>
+    <span class="quotes">"</span>
+  </div>
+</section>
+<section class="container-data-real-time">
+  <h2>Datos actuales</h2>
+  <div class="container-text">
+        <span>Asteroides cercanos</span>
+        <span>Posicion de la ISS</span>
+        <span>Misiones</span>
+        <span>Clima de Marte</span>
+        <span>Evento astronimico</span>
+  </div>
+</section>
 <section class="container-footer">
   <div class="footer-content">
     <span>© 2025 AstroData. Todos los derechos reservados.</span>
-    <span>Desarrollado por ElvisRD con datos recopilados de la NASA</span>
+    <span>Desarrollado por ElvisRD con datos recopilados de la API de la NASA.</span>
   </div>
 </section>

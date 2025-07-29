@@ -5,11 +5,36 @@
   overflow: hidden;
   background-color: black;
   border-radius: 10px;
+  cursor: pointer;
 
-  .card-image {
+  .earth-image {
     position: absolute;
-    bottom: -45%; /* Ajusta según qué parte quieres mostrar */
+    bottom: -45%; 
     background-image: url('../../../assets/images/earth.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    z-index: 2;
+  }
+
+  .mars-image {
+    position: absolute;
+    bottom: -50%; 
+    background-image: url('../../../assets/images/mars.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    z-index: 2;
+  }
+
+  .asteroid-image {
+    position: absolute;
+    bottom: -40%; 
+    background-image: url('../../../assets/images/asteroid.png');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -22,11 +47,31 @@
     color: white;
     position: relative;
 
-    .card-title {
+    .card-title-earth {
       margin-top: 20px;
       writing-mode: vertical-rl;
       text-orientation: upright;
       font-size: 3.5rem;
+      z-index: 1;
+      letter-spacing: -13px;
+      line-height: 1.6;
+    }
+
+    .card-title-mars {
+      margin-top: 20px;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: 4.5rem;
+      z-index: 1;
+      letter-spacing: -13px;
+      line-height: 1.6;
+    }
+
+    .card-title-asteroid {
+      margin-top: 20px;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: 2.5rem;
       z-index: 1;
       letter-spacing: -13px;
       line-height: 1.6;
