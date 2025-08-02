@@ -8,13 +8,13 @@
     {
       "classImg": "mars-image",
       "type": "mars",
-      "title": "MARS",
+      "title": "MARTE",
       "description": "Conoce las misiones más importantes de la historia y las actuales."
     },
     {
       "classImg": "asteorid-image",
       "type": "asteroid",
-      "title": "ASTEROIDE",
+      "title": "ASTEROIDES",
       "description": "Visualiza datos y ubicación de satélites en tiempo real."
     }
     

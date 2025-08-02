@@ -15,7 +15,7 @@
     background-position: center;
     height: 100%;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.3;
     z-index: 2;
   }
 
@@ -27,7 +27,7 @@
     background-position: center;
     height: 100%;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.3;
     z-index: 2;
   }
 
@@ -39,7 +39,7 @@
     background-position: center;
     height: 100%;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.3;
     z-index: 2;
   }
 
@@ -61,7 +61,7 @@
       margin-top: 20px;
       writing-mode: vertical-rl;
       text-orientation: upright;
-      font-size: 4.5rem;
+      font-size: 4rem;
       z-index: 1;
       letter-spacing: -13px;
       line-height: 1.6;
@@ -71,7 +71,7 @@
       margin-top: 20px;
       writing-mode: vertical-rl;
       text-orientation: upright;
-      font-size: 2.5rem;
+      font-size: 2.44rem;
       z-index: 1;
       letter-spacing: -13px;
       line-height: 1.6;
@@ -89,4 +89,25 @@
       z-index: 1;
     }
   }
+}
+
+.card-element:hover {
+  scale: 1.1;
+  transition: scale 0.5s ease-in-out;
+
+  .card-text {
+      text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 40px rgba(255, 255, 255, 0.5); 
+    transition: text-shadow 0.5s ease;
+  }
+
+  .earth-image, .mars-image, .asteroid-image {
+    opacity: 0.8;
+    transform: translate(0, -10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+  }
+
+  
 }
