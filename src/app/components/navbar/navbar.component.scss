@@ -1,0 +1,46 @@
+.container-navbar{
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  z-index: 3;
+
+  button{
+    cursor: pointer;
+    border: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    .earth-img{
+      width: 3.8em;
+      height: auto;
+      object-fit: cover;
+    };
+
+    .mars-img{
+      width: 4em;
+      height: auto;
+      object-fit: contain;
+    };
+
+    .asteorid-img{
+      width: 4.2em;
+      height: auto;
+    };
+    
+  }
+
+  button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+
+
+}
