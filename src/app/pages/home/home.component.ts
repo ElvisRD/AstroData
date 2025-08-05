@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { NasaServiceService } from '../../services/nasa-service.service';
 import { CardElementComponent } from '../../components/card-element/card-element.component';
-import { bounceAnimation } from '../../animations/bounce.animations';
 
 @Component({
   selector: 'app-home',
   imports: [CardElementComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  animations: [bounceAnimation],
 })
 export class HomeComponent {
 
