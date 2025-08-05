@@ -1,11 +1,13 @@
 <section class="container-image-home">
   <div class="image-luna" aria-hidden="true"></div>
-
   <div class="container-text">
-    <h1>ASTRODATA</h1>
+    <h1  >ASTRODATA</h1>
     <h3>Explora el universo con datos obtenidos de la NASA</h3>
     <button type="button">Explorar ahora</button>
   </div>
+  <button [@fadeInUp] class="button-scroll" type="button">
+    <span class="pi pi-arrow-down"></span>
+  </button>
 </section>
 <section class="container-presentation">
   <div class="container-text">
@@ -40,7 +42,6 @@
       }
     </div>
     <div class="container-text">
-      <h3>Imagen del dia</h3>
       <h3>{{pictureDayData?.title}}</h3>
       <p>{{pictureDayData?.explanation}}</p>
       <p>{{pictureDayData?.copyright}}</p>

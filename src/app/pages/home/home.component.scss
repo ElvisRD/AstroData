@@ -5,6 +5,7 @@
   overflow: hidden;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
   .image-luna {
@@ -17,38 +18,64 @@
   position: absolute;
   z-index: 1;
   opacity: 0.6; 
-}
+  }
 
   .container-text {
-    margin-top: 16vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
     z-index: 2;
-    text-align: center;
+    
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 6rem;
       margin-bottom: 1rem;
     }
 
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       margin-bottom: 2rem;
     }
 
     button {
-      background-color: #1a73e8;
+      background-color: black;
       color: #fff;
-      padding: 0.75rem 1.5rem;
+      padding: 0.75rem 1rem;
       border: none;
       border-radius: 0.5rem;
       font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      scale: 1;
+      transition: background-color 0.5s ease, scale 0.5s ease;
 
       &:hover {
-        background-color: #155ab6;
+        scale: 1.2;
+        transition: scale 0.5s ease;
+        background-color: gray;
       }
     }
+  }
+
+  .button-scroll {
+    position: absolute;
+    width: 4rem;
+    background-color: black;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid gray;
+    height: 4rem;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 2;
+
+    span{
+      font-size: 1.6rem;
+      color: white;
+    };
   }
 }
 

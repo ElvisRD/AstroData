@@ -1,17 +1,26 @@
 import { Component } from '@angular/core';
 import { NasaServiceService } from '../../services/nasa-service.service';
 import { CardElementComponent } from '../../components/card-element/card-element.component';
+import { fadeInUpAnimation } from '../../animations/bounce.animations';
+import { trigger, transition, useAnimation } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   imports: [CardElementComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
+  animations: [
+   trigger('fadeInUp', [
+            transition(':enter', useAnimation(fadeInUpAnimation))
+        ])
+  ],
 })
 export class HomeComponent {
 
   pictureDayData: any;
+  animationState = true
   categories: any[] = [];
+  bounceAnimation = true;
   interestingPhrases: any[] = [];
 
   constructor(
