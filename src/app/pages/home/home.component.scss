@@ -76,7 +76,22 @@
       font-size: 1.6rem;
       color: white;
     };
+
+    animation: bounce 2s ease-in-out infinite;
+
+    @keyframes bounce {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    }
   }
+  .button-scroll:hover{
+    scale: 1.05;
+  }
+
 }
 
 .container-presentation{

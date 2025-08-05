@@ -1,35 +1,20 @@
-import { Injectable } from '@angular/core';
-import { animation, style, animate, keyframes, AnimationReferenceMetadata } from '@angular/animations';
+import {
+  trigger,
+  transition,
+  animate,
+  style,
+  keyframes
+} from '@angular/animations';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class SiteAnimationsService {
-}
-
-export const fadeInUpAnimation: AnimationReferenceMetadata = animation([
-  style({
-    visibility: 'hidden'
-  }),
-  animate('{{ duration }} {{ delay }}', keyframes([
-    style({
-      visibility: 'visible',
-      opacity: 0,
-      transform: 'translate3d(0, {{ distance }}, 0)',
-      easing: 'ease',
-      offset: 0
-    }),
-    style({
-      opacity: 1,
-      transform: 'translate3d(0, 0, 0)',
-      easing: 'ease',
-      offset: 1
-    })
-  ]))
-], {
-  params: {
-    duration: '1s',
-    delay: '300ms',
-    distance: '25%'
-  }
-});
+export const bounceAnimation =  trigger('bounce', [
+  transition(':enter', [
+    animate('1s ease-in-out', keyframes([
+      style({ transform: 'translateY(0)', offset: 0 }),
+      style({ transform: 'translateY(-30px)', offset: 0.3 }),
+      style({ transform: 'translateY(0)', offset: 0.5 }),
+      style({ transform: 'translateY(-15px)', offset: 0.7 }),
+      style({ transform: 'translateY(0)', offset: 1 }),
+    ]))
+  ]),
+  // Para repetir el bounce indefinidamente (loop), se puede usar un trigger aparte o manejarlo con Angular pero la animación default solo corre al entrar.
+]);
