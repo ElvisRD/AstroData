@@ -45,6 +45,7 @@
 
   .card-text {
     color: white;
+    filter: brightness(0.4);
     position: relative;
 
     .card-title-earth {
@@ -96,11 +97,12 @@
   transition: scale 0.5s ease-in-out;
 
   .card-text {
+     filter: brightness(0.9);
       text-shadow: 
         0 0 10px rgba(255, 255, 255, 0.8),
         0 0 20px rgba(255, 255, 255, 0.6),
         0 0 40px rgba(255, 255, 255, 0.5); 
-    transition: text-shadow 1s ease-in-out;
+    transition: text-shadow 1s ease-in-out, filter 0.5s ease-in-out ;
   }
 
   .earth-image, .mars-image, .asteroid-image {

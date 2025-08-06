@@ -11,29 +11,35 @@
 </section>
 <section class="container-presentation">
   <div class="container-text">
-    <h1>Bienvenido a <span class="brand">AstroData</span></h1>
-    <p>Tu puerta de entrada al universo de los datos astronómicos.</p>
-    <p>Consulta imágenes del espacio en alta resolución, aprende sobre misiones espaciales y accede a datos reales de la NASA.</p>
-    <p>Explora el cosmos como nunca antes — ¡todo desde un solo lugar!</p>
-    <ul class="highlights">
-      <li>🌌 Imagen astronómica del día (APOD)</li>
-      <li>🚀 Misiones actuales y pasadas</li>
-      <li>📊 Visualizaciones interactivas</li>
-      <li>🔭 Datos en tiempo real de cuerpos celestes</li>
-    </ul>
-    <a href="#explorar" class="btn-explorar">Empezar a explorar</a>
+    <h1>¿Que es <span class="brand">AstroData</span>?</h1>
+
+    <p>Una plataforma interactiva impulsada por las APIs oficiales de la NASA, diseñada para acercarte al espacio como nunca antes.</p>
+
+    <p>Consulta imágenes astronómicas, sigue misiones espaciales en tiempo real y accede a datos científicos actualizados directamente desde las bases de datos de la NASA.</p>
+
+    <p>Ya seas un estudiante, un aficionado al espacio o un investigador, <strong>AstroData</strong> te abre las puertas al cosmos — gratis, visual e ilimitado.</p>
+
+  <ul class="highlights">
+    <li>Imagen Astronómica del Día</li>
+    <li>Información detallada de misiones pasadas y actuales</li>
+    <li>Gráficos y visualizaciones de datos reales</li>
+    <li>Seguimiento en tiempo real de cuerpos celestes</li>
+  </ul>
+    <button>
+       Explorar ahora
+    </button>
   </div>
   <div class="container-image">
     <img src="assets/images/astronaut.jpg" alt="Astronauta en el espacio" /> 
   </div>
 </section>
-<section class="container-interesting-phrases">
+<!-- <section class="container-interesting-phrases">
   <div class="container-text">
     <span class="quotes">"</span>
     <span class="text">{{interestingPhrases[0]}}</span>
     <span class="quotes">"</span>
   </div>
-</section>
+</section> -->
 <section id="APOD" class="container-apod">
   <div class="apod-content">
     <div class="container-image">
@@ -42,15 +48,19 @@
       }
     </div>
     <div class="container-text">
-      <h3>{{pictureDayData?.title}}</h3>
+      <h2>Imagen Astronomica</h2>
+      <span>{{pictureDayData?.title}}</span>
       <p>{{pictureDayData?.explanation}}</p>
       <p>{{pictureDayData?.copyright}}</p>
     </div>
   </div>
+  <div class="container-asteroid">
+      <img src="assets/images/asteroid2.png" alt="asteroide">
+    </div>
 </section>
 <section class="container-interesting-phrases">
   <div class="container-text">
-    <span class="quotes">"</span>
+    <span class="quotes">Dato interesante: "</span>
     <span class="text">{{interestingPhrases[1]}}</span>
     <span class="quotes">"</span>
   </div>
@@ -67,7 +77,7 @@
 </section>
 <section class="container-interesting-phrases">
   <div class="container-text">
-    <span class="quotes">"</span>
+    <span class="quotes">Dato interesante: "</span>
     <span class="text">{{interestingPhrases[2]}}</span>
     <span class="quotes">"</span>
   </div>
