@@ -214,27 +214,6 @@
   
 }
 
-.container-interesting-phrases {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  color: white;
-  position: relative;
-
-  .container-text {
-    text-align: center;
-    font-size: 2rem;
-    padding: 50px 20px;
-
-    .quotes {
-      font-size: 2.5rem;
-      padding: 0 6px;
-      color: #ffffff; /* Color for quotes */
-    }
-  }
-}
-
 .container-apod {
   display: flex;
   align-items: center;
@@ -293,7 +272,8 @@
 .container-cards {
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: #1a1a1a;
+  position: relative;
   padding-bottom: 80px;
 
   h3 {
@@ -308,7 +288,43 @@
     justify-content: center;
     gap: 5rem;
   }
+}
 
+.container-events{
+  width: 100%;
+  position: relative;
+  display: flex;
+  background-color: #1a1a1a;
+  padding: 50px 0px;
+
+  .container-text{
+    width: 50%;
+    padding: 50px;
+
+    h2{
+    }
+
+    p{
+      font-size: 1.7rem;
+      text-align: justify;
+    }
+  }
+
+  .container-calendar{
+    background-color: #1a1a1a;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+
+    iframe {
+      filter: invert(1);
+    }
+  }
+
+  h3{
+    text-align: center;
+  }
 }
 
 @keyframes bounce {

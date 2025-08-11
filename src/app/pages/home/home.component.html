@@ -35,7 +35,6 @@
     </div>
   </div>
 </section>
-
 <section class="container-presentation">
   <div class="container-text">
     <h1>¿Que es <span class="brand">AstroData</span>?</h1>
@@ -60,13 +59,7 @@
     <img src="assets/images/astronaut.jpg" alt="Astronauta en el espacio" /> 
   </div>
 </section>
-<!-- <section class="container-interesting-phrases">
-  <div class="container-text">
-    <span class="quotes">"</span>
-    <span class="text">{{interestingPhrases[0]}}</span>
-    <span class="quotes">"</span>
-  </div>
-</section> -->
+@if(pictureDayData?.media_type !== 'other'){
 <section id="APOD" class="container-apod">
   <div class="apod-content">
     <div class="container-image">
@@ -85,13 +78,15 @@
       <img src="assets/images/asteroid2.png" alt="asteroide">
     </div>
 </section>
-<section class="container-interesting-phrases">
+}
+
+<!-- <section class="container-interesting-phrases">
   <div class="container-text">
     <span class="quotes">Dato interesante: "</span>
     <span class="text">{{interestingPhrases[1]}}</span>
     <span class="quotes">"</span>
   </div>
-</section>
+</section> -->
 <section class="container-cards">
   <h3>Explora más</h3>
   <div class="cards">
@@ -102,10 +97,30 @@
     }
   </div>
 </section>
-<section class="container-interesting-phrases">
+<!-- <section class="container-interesting-phrases">
   <div class="container-text">
     <span class="quotes">Dato interesante: "</span>
     <span class="text">{{interestingPhrases[2]}}</span>
     <span class="quotes">"</span>
+  </div>
+</section> -->
+<section class="container-events">
+  <div class="container-text">
+    <h2>Eventos astronómicos</h2>
+    <p>
+      El calendario a la derecha presenta un calendario actualizado de los próximos eventos astronómicos. Entre estos fenómenos se incluyen eclipses solares y lunares, lluvias de meteoros, conjunciones planetarias, oposiciones y otros eventos celestes destacados.
+    </p>
+    <p>
+      Para explorar los eventos de manera más visual y detallada, te recomendamos la aplicación 
+      <a href="https://stellarium-web.org/" target="_blank" rel="noopener noreferrer">Stellarium</a>.  
+      Aunque no es una transmisión en tiempo real, esta herramienta ofrece una simulación muy precisa del cielo nocturno, permitiéndote anticipar y preparar la observación de los próximos fenómenos astronómicos.
+   </p>
+  </div>
+  <div class="container-calendar">
+    <iframe 
+      scrolling="no" 
+      style="border: none; width:850px; height:800px; overflow: none; border-radius: 10px" 
+      src="https://in-the-sky.org/widgets/newscal.php?skin=0&locale=1&town=3893894">
+    </iframe>
   </div>
 </section>

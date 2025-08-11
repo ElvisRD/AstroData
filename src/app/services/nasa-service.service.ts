@@ -40,5 +40,4 @@ export class NasaServiceService {
     return this.http.get('https://osdr.nasa.gov/osdr/data/osd/files/87.1')
   }
 
-
 }
